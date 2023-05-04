@@ -13,16 +13,20 @@ function myBtn(props) {
 
   return (
     <div className="mx-auto my-2 ">
-      <div className="form col-auto">
-        <input 
-          type="text" 
-          value={count}
-          className="form-control bg-light text-center fs-5" 
-          onChange={changeInput}
-        />
-      </div>
-  
-      <div className="btn-group col-auto">
+      <div className="input-group">
+        <div>
+          
+        </div>
+        <div className="form col-auto">
+          <input 
+            type="text" 
+            value={count}
+            className="form-control bg-light text-center fs-5" 
+            onChange={changeInput}
+          />
+        </div>
+        
+        <div className="btn-group col-auto">
           <button className="btn btn-success fs-6 mx-auto" onClick={increaseone}>
             <i className="bi bi-plus"></i>
           </button>
@@ -30,6 +34,10 @@ function myBtn(props) {
             <i className="bi bi-dash"></i>
           </button>
         </div>
+      </div>
+      
+  
+      
     </div>
   )
 }
