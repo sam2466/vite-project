@@ -7,13 +7,13 @@ import About from './Page/About';
 import User from './Page/User';
 
 function App() {
-  //
+  
   return (
     <div className="container text-center">
       <Router>
         <MainMenu2/>
         <Routes>
-          <Route path= "/" element = {<Home/>} />
+          <Route path= "/vite-project" element = {<Home/>} />
           <Route path= "/about" element = {<About/>} />
           <Route path= "/todo" element = {<Todo/>} />
           <Route path= "/products" element = {<Product/>} />

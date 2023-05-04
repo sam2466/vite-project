@@ -14,7 +14,7 @@ function MainMenu2() {
             <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                 
                 <Mylink2 
-                    to = "/" 
+                    to = "/vite-project" 
                     color = "white" 
                     text = "Home" 
                     icon = "house"
