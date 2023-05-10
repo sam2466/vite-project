@@ -13,11 +13,11 @@ function App() {
       <Router>
         <MainMenu2/>
         <Routes>
-          <Route path= "/vite-project" element = {<Home/>} />
-          <Route path= "/about" element = {<About/>} />
-          <Route path= "/todo" element = {<Todo/>} />
-          <Route path= "/products" element = {<Product/>} />
-          <Route path= "/users" element = {<User/>} />
+          <Route path= "/vite-project/" element = {<Home/>} />
+          <Route path= "/vite-project/about" element = {<About/>} />
+          <Route path= "/vite-project/todo" element = {<Todo/>} />
+          <Route path= "/vite-project/products" element = {<Product/>} />
+          <Route path= "/vite-project/users" element = {<User/>} />
         </Routes>
       </Router>
       

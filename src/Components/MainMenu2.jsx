@@ -14,28 +14,28 @@ function MainMenu2() {
             <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                 
                 <Mylink2 
-                    to = "/vite-project" 
+                    to = "/vite-project/" 
                     color = "white" 
                     text = "Home" 
                     icon = "house"
                 />
 
                 <Mylink2 
-                    to = "/about" 
+                    to = "/vite-project/about" 
                     color = "white" 
                     text = "Dashboard" 
                     icon = "speedometer2"
                 />
 
                 <Mylink2 
-                    to = "/todo" 
+                    to = "/vite-project/todo" 
                     color = "white" 
                     text = "todo" 
                     icon = "list-task"
                 />
 
                 <Mylink2 
-                    to = "/products" 
+                    to = "/vite-project/products" 
                     color = "white" 
                     text = "Products" 
                     icon = "grid"

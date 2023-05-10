@@ -1,4 +1,6 @@
-const apiURL = 'http://localhost:5000/ap/members/'
+import useSWR from "swr";
+
+const apiURL = 'http://localhost:5000/api/members/'
 
 const myFetch = async (method, url, body) => {
     let options = {
@@ -16,6 +18,12 @@ const myFetch = async (method, url, body) => {
 };
 
 const membersAPI = {
+    useMembers: () => {
+        const fetcher = (url) => fetch(url).then((res) => res.json())
+        const {data, mutate, error, isLoading} = useSWR(apiURL, fetcher, { refreshInterval: 1000*15})
+        const loading = !data && !error;
+        return {members: data, mutate, error, isLoading: loading}
+    },
     getAll: () => myFetch('GET', apiURL),
     addOne: (aMember) => myFetch('POST', apiURL, aMember),
     updateOne: (aMember) => myFetch('PUT', apiURL, aMember),
