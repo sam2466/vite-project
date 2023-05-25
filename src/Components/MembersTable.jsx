@@ -1,23 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MembersTableRow from './MembersTableRow'
 
 function MembersTable(props) {
-    const member = props.member;
+    const members = props.member;
+    const actions = props.actions;
   return (
     <div>
         <table className="table table-success table-striped table-hover table-responsive">
             <thead>
                 <tr>
                     <th scope="col">id</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Status</th>
+                    <th scope="col" style = {{ width: "100 px" }}>
+                        Name
+                    </th>
+                    <th scope="col" style = {{ width: "200 px" }}>
+                        Email
+                    </th>
+                    <th scope="col" style = {{ width: "100 px" }}>
+                        Status
+                    </th>
+                    <th scope="col" style = {{ width: "100 px" }}>
+                        Action
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 {
-                    member?.map((ele,idx) => (
-                    <MembersTableRow key={ele.id} member={ele}/>
+                    members?.map((ele,idx) => (
+                    <MembersTableRow key={ele.id} member={ele} actions={actions} />
                     ))
                 }
             </tbody>

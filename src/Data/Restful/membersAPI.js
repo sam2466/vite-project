@@ -22,13 +22,13 @@ const membersAPI = {
         const fetcher = (url) => fetch(url).then((res) => res.json())
         const {data, mutate, error, isLoading} = useSWR(apiURL, fetcher, { refreshInterval: 1000*15})
         const loading = !data && !error;
-        return {members: data, mutate, error, isLoading: loading}
+        return {data: data, mutate, error, isLoading: loading}
     },
     getAll: () => myFetch('GET', apiURL),
     addOne: (aMember) => myFetch('POST', apiURL, aMember),
-    updateOne: (aMember) => myFetch('PUT', apiURL, aMember),
+    updateOne: (aMember) => myFetch('PUT', apiURL + aMember.id, aMember),
     switchStatus: (id) => myFetch('PUT', apiURL + 'switch/' + id, {id}),
-    deleteOne: (id) => myFetch('DELETE',apiURL, {id})
+    deleteOne: (id) => myFetch('DELETE',apiURL + id, {id})
 };
 
 export default membersAPI;
